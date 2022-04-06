@@ -1,0 +1,7 @@
+balise php tt en haut ou nous signifions que nous voulons un require de la page commandes.php
+creation d une variable mesProduits qui recupere tt nos produits.comment recupere t on nos produits avec la function afficher
+donc $mesProduits = afficher() qui maintenant sera un tableau car il recupere 
+Nous allons indiquer notre function afficher dans notre card body, ce qui dupliquera notre card body au nombre d articles que nous auront a vendre 
+on met une balise php dans notre card body
+en y incluant une boucle for each pour chaque $mesProduits as $produit, les : signifie la fin de notre foreach
+on ferme en mettant un endforeach
