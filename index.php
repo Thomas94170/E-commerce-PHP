@@ -61,13 +61,13 @@ $mesProduits = afficher();
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">Sign In</h4>
+                        <h4 class="text-white"></h4>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Contact</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                            <li><a href="#" class="text-white">Connexion</a></li>
+                            <li><a href="https://twitter.com/" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="./admin/index.php" class="text-white">Connexion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ $mesProduits = afficher();
                         <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                         <circle cx="12" cy="13" r="4" />
                     </svg>
-                    <strong>Monoshop</strong>
+                    <strong>Mon Séjour.fr</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -94,8 +94,8 @@ $mesProduits = afficher();
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Monoshop</h1>
-                    <p class="lead text-muted">Votre site E-commerce.</p>
+                    <h1 class="fw-light">Mon Séjour</h1>
+                    <p class="fw-light">Votre site de voyage unique!</p>
                 </div>
             </div>
         </section>
@@ -106,18 +106,15 @@ $mesProduits = afficher();
                     <?php foreach ($mesProduits as $produit) : ?>
                         <div class="col">
                             <div class="card shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <title>Placeholder</title>
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
+                                <title><?= $produit->nom ?></title>
+                                <img src="<?= $produit->image ?>" alt="img-produit" width="100%" height="auto">
                                 <div class="card-body">
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><?= $produit->description ?></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Acheter</button>
                                         </div>
-                                        <small class="text-muted">9 mins</small>
+                                        <small class="text-muted"><?= $produit->prix ?>€</small>
                                     </div>
                                 </div>
                             </div>

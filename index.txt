@@ -5,3 +5,6 @@ Nous allons indiquer notre function afficher dans notre card body, ce qui dupliq
 on met une balise php dans notre card body
 en y incluant une boucle for each pour chaque $mesProduits as $produit, les : signifie la fin de notre foreach
 on ferme en mettant un endforeach
+<title><?=$produit ->nom ?></title> sert a afficher le nom de mon produit. ON fait cela pour chaque élément de notre produit : nom image prix description id etc
+
+Les produits de la base de données sont affichés grace a notre boucle foreach dans la balise php
